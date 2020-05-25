@@ -68,7 +68,7 @@ class FTPStore(object):
             if params.is_active:
                 timeout = float(params.timeout) if params.timeout else 180
                 return FTPFacade(params.host, params.user, params.get('password'), params.acct, timeout,
-                    int(params.port), params.dircache)
+                    int(params.port))
             else:
                 raise Inactive(params.name)
 
